@@ -1,0 +1,53 @@
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <title>Testing Buttons</title>
+        <style>
+            .head-panel{
+                display: inline-block;
+                margin: 2px;
+            }
+            .panel-title {
+                width: 80%
+            }
+            .col-md-6 {
+                margin: 6%
+            }
+        </style>
+    </head>
+    <body>
+            <div class='container-fluid'>
+                <div class'btn-work'>
+                    <div class='col-md-6'>
+                        <div class="panel panel-default content-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title  head-panel">Save this button</h3>
+                                <button class='btn btn-success btnsave-clss  head-panel' id='save-btn'>SAVE</button>
+                            </div>
+                            <div class="panel-body">
+                                <h5>Chicken Be sticking, but I ain't licking. <br />Jump off the roof with a compelling story, but I last name ain't Rory.<h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $('#save-btn').on('click', function(event, req) {
+                    event.preventDefault()
+                    alert("Button Has Been Clicked")
+                    // console.log(req.body)
+                    var  chosen = req.body
+                    if (chosen) {
+                       console.log()
+                    }
+                    $.post('/saved')
+                    .then(function(data) {
+                        console.log(data)
+                    })
+                }) 
+            </script>
+    </body>
+</html>

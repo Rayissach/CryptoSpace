@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS gitlabspot;
+CREATE DATABASE gitlabspot;

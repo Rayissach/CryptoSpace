@@ -1,0 +1,15 @@
+/* .bottom-header {
+    width: 100%;
+} */
+.footer {
+    width: 100%;
+}
+.booly {
+    background: black;
+    color: silver;
+    padding: 50px;
+    width: 100%;
+}
+.btn {
+    color: yellow
+}
